@@ -1,0 +1,222 @@
+/*
+Sommaire
+
+    - Variables
+
+    - Nav
+
+    - Home section
+
+    - About section
+
+    - Features section
+
+    - Available section
+
+    - Price section
+
+    - Contact section
+
+    - Footer
+
+*/
+
+/* Variables */
+
+:root {
+    --main-bg-color: #0A0A0A;
+
+    --secondary-bg-color: #FFFFFF;
+
+    --call-to-action: #27206E;
+}
+
+/* end Variables */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+/* Nav */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    max-height: 100px;
+    background-color: var(--main-bg-color);
+}
+
+nav img {
+    width: 88px;
+    height: 88px;
+}
+
+nav div {
+    width: 88px;
+    height: 88px;
+    background-color: green;
+}
+
+/* End Nav */
+
+/* Home section */
+
+.home {
+    padding: 20px 50px;
+    display: grid;
+    height: 90vh;
+}
+
+.home h1 {
+    font-size: 36px;
+    margin: auto;
+}
+
+.home h2 {
+    font-size: 24px;
+}
+
+/* end Home section */
+
+/* About section */
+
+.about {
+    display: grid;
+    padding: 20px;
+    height: 100vh;
+}
+
+.about h2 {
+    margin: auto;
+    text-align: center;
+}
+
+.about img {
+    margin: auto;
+}
+
+.about p {
+    margin: auto;
+}
+
+.about div {
+    margin: auto;
+}
+
+/* end About section */
+
+/* Features section */
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 20px;
+}
+
+.features h2 {
+    text-align: center;
+}
+
+.bloc-feature {
+    display: grid;
+    width: 280px;
+    height: 280px;
+    background-color: lightseagreen;
+    border-radius: 25px;
+    margin: auto;
+    padding: 10px;
+}
+
+.bloc-feature img {
+    margin: auto;
+    width: 90px;
+    height: 90px;
+    background-color: #0A0A0A;
+}
+
+.bloc-feature h3 {
+    margin: auto;
+    text-align: center;
+}
+
+.bloc-feature p {
+    margin: auto;
+    width: 240px;
+    height: 100px;
+    text-align: center;
+}
+
+/* end Features section */
+
+/* Available section */
+
+.available {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 20px;
+    text-align: center;
+}
+
+.available h2 {
+    margin: auto;
+    text-align: center;
+}
+
+.bloc-available img {
+    width: 60px;
+    height: 60px;
+}
+
+/* end Available section */
+
+/* Price section */
+
+.price {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 20px;
+}
+
+.price h2 {
+    margin: auto;
+    text-align: center;
+}
+
+.bloc-price {
+    margin: auto;
+    width: 240px;
+    height: 600px;
+    border-radius: 25px;
+    background-color: darkgrey;
+}
+
+/* end Price section */
+
+/* Contact section */
+
+.contact {
+    padding: 20px;
+    height: 100vh;
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+/* end Contact section */
+
+/* Footer */
+
+
+
+/* end Footer */
