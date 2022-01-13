@@ -86,8 +86,8 @@ nav div {
     padding: 20px 50px;
     display: flex;
     flex-direction: column;
-    height: 90vh;
-    background-image: url("../images/background_home.png");
+    height: 94vh;
+    background-image: url("../images/background_home_v2.png");
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100%;
@@ -110,7 +110,13 @@ nav div {
 }
 
 .home p {
-
+    margin: auto;
+    text-align: center;
+    padding-top: 170px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--secondary-bg-color);
+    text-shadow: 0 0 0.2em var(--main-bg-color), 0 0 0.2em var(--main-bg-color);
 }
 
 /* end Home section */
