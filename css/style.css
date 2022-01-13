@@ -26,7 +26,7 @@ Sommaire
 :root {
     --main-bg-color: #0A0A0A;
 
-    --secondary-bg-color: #F8F8F9;
+    --secondary-bg-color: #f8f8f9;
 
     --call-to-action: #27206E;
 
@@ -42,8 +42,12 @@ Sommaire
     font-family: Montserrat, sans-serif;
 }
 
+body {
+    background-color: var(--secondary-bg-color);
+}
+
 section {
-    background-color: white;
+    background-color: var(--secondary-bg-color);
 }
 
 a {
@@ -68,7 +72,10 @@ nav img {
 nav div {
     width: 88px;
     height: 88px;
-    background-color: green;
+    background-image: url("../images/menu_button.png");
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
 }
 
 /* End Nav */
@@ -124,6 +131,7 @@ nav div {
 .about h2 {
     margin: 30px auto;
     text-align: center;
+    font-size: 36px;
 }
 
 .about img {
@@ -145,8 +153,12 @@ nav div {
     align-items: center;
     box-shadow: 0 0 0.2em var(--secondary-bg-color), 0 0 0.2em var(--secondary-bg-color);
     border-radius: 25px;
+    min-width: 150px;
     max-width: 150px;
     min-height: 50px;
+
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .about a {
@@ -162,38 +174,44 @@ nav div {
     grid-template-columns: 1fr;
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
-    padding: 20px;
+    padding: 40px 20px 60px 20px;
     min-height: 1320px;
     background-image: url("../images/background_features.png");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
+    background-color: white;
 }
 
 .features h2 {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-bg-color);
+    margin: auto;
+    font-size: 36px;
 }
 
 .bloc-feature {
     display: grid;
     width: 280px;
-    height: 280px;
-    background-color: lightseagreen;
+    height: 300px;
     border-radius: 25px;
+    box-shadow: 0 0 0.2em var(--secondary-bg-color), 0 0 0.2em var(--secondary-bg-color);
     margin: auto;
     padding: 10px;
 }
 
 .bloc-feature img {
     margin: auto;
-    width: 90px;
-    height: 90px;
-    background-color: #0A0A0A;
+    width: 200px;
+    height: 237px;
 }
 
 .bloc-feature h3 {
     margin: auto;
     text-align: center;
+    color: var(--secondary-bg-color);
 }
 
 .bloc-feature p {
@@ -212,23 +230,33 @@ nav div {
     grid-template-columns: 1fr;
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
-    padding: 20px;
+    padding: 40px 20px 60px 20px;
     text-align: center;
     min-height: 550px;
     background-image: url("../images/background_available.png");
     background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: top;
+    background-size: cover;
+    background-position: center;
 }
 
 .available h2 {
+    margin: 20px auto 10px auto;
+    text-align: center;
+    font-size: 36px;
+    height: 36px;
+    color: var(--secondary-bg-color);
+}
+
+.available h3 {
     margin: auto;
     text-align: center;
+    color: var(--secondary-bg-color);
 }
 
 .bloc-available img {
-    width: 60px;
-    height: 60px;
+    margin: 10px auto 10px auto;
+    width: 80px;
+    height: 80px;
 }
 
 /* end Available section */
@@ -240,20 +268,70 @@ nav div {
     grid-template-columns: 1fr;
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
-    padding: 20px;
+    padding: 60px 20px;
+
+    background-image: url("../images/background_price.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
 }
 
 .price h2 {
     margin: auto;
     text-align: center;
+    color: var(--secondary-bg-color);
+    font-size: 36px;
 }
 
 .bloc-price {
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
     width: 240px;
     height: 600px;
     border-radius: 25px;
-    background-color: darkgrey;
+    color: var(--secondary-bg-color);
+
+    padding: 20px;
+
+    background-color: var(--main-bg-color);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.bronze {
+    background-image: url("../images/background_price_card_1.png");
+    box-shadow: 0 0 0.5em #623e2d, 0 0 0.5em #623e2d, 0 0 0.5em #623e2d;
+}
+
+.silver {
+    background-image: url("../images/background_price_card_2.png");
+    box-shadow: 0 0 0.5em  #7d7d7d, 0 0 0.5em  #7d7d7d, 0 0 0.5em  #7d7d7d;
+}
+
+.gold {
+    background-image: url("../images/background_price_card_3.png");
+    box-shadow: 0 0 0.5em #b4871b, 0 0 0.5em #b4871b, 0 0 0.5em #b4871b;
+}
+
+.bloc-price h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+
+.bloc-price p {
+    height: 70%;
+    text-align: center;
+}
+
+.bloc-price div {
+    margin: 20px;
+    height: 10%;
+    background-color: var(--main-bg-color);
+
 }
 
 /* end Price section */
@@ -261,18 +339,61 @@ nav div {
 /* Contact section */
 
 .contact {
-    padding: 20px;
-    height: 100vh;
+    padding: 20px 40px;
+    min-height: 100vh;
+
+    background-image: url("../images/background_contact.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
 }
 
 .contact h2 {
     text-align: center;
+    margin: 30px auto;
+    font-size: 36px;
+}
+
+.contact input {
+    background-color: var(--secondary-bg-color);
+    border: none;
+}
+
+.contact textarea {
+    resize : none;
+}
+
+.input-contact {
+    background-color: var(--secondary-bg-color);
+    padding: 5px;
+    text-align: left;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 0 0.3em var(--main-bg-color), 0 0 0.3em var(--main-bg-color);
+    text-decoration: none;
+    margin: 20px 5px;
+    width: 100%;
 }
 
 /* end Contact section */
 
 /* Footer */
 
+footer {
+    display: flex;
+    height: 150px;
+    background-color: var(--main-bg-color);
+}
 
+footer img {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+
+footer p {
+    color: var(--secondary-bg-color);
+    margin: auto;
+}
 
 /* end Footer */
