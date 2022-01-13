@@ -26,9 +26,11 @@ Sommaire
 :root {
     --main-bg-color: #0A0A0A;
 
-    --secondary-bg-color: #FFFFFF;
+    --secondary-bg-color: #F8F8F9;
 
     --call-to-action: #27206E;
+
+    --secondary-font-color: #A29BEE;
 }
 
 /* end Variables */
@@ -38,6 +40,14 @@ Sommaire
     margin: 0;
     padding: 0;
     font-family: Montserrat, sans-serif;
+}
+
+section {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Nav */
@@ -67,17 +77,33 @@ nav div {
 
 .home {
     padding: 20px 50px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     height: 90vh;
+    background-image: url("../images/background_home.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
 }
 
 .home h1 {
     font-size: 36px;
-    margin: auto;
+    margin: 50px auto 0 auto;
+    color: var(--secondary-bg-color);
+    height: 36px;
+    /*text-shadow: 0 0 0.2em #F8F8F9, 0 0 0.2em #F8F8F9, 0 0 0.2em #F8F8F9;*/
 }
 
 .home h2 {
     font-size: 24px;
+    color: var(--secondary-font-color);
+    text-align: center;
+    margin: 0 auto 20px auto;
+    text-shadow: 0 0 0.2em var(--secondary-bg-color), 0 0 0.2em var(--secondary-bg-color);
+}
+
+.home p {
+
 }
 
 /* end Home section */
@@ -85,26 +111,46 @@ nav div {
 /* About section */
 
 .about {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     height: 100vh;
+    background-image: url("../images/background_about.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
 }
 
 .about h2 {
-    margin: auto;
+    margin: 30px auto;
     text-align: center;
 }
 
 .about img {
-    margin: auto;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
 }
 
 .about p {
-    margin: auto;
+    margin: 30px auto;
+    text-align: center;
+    padding: 0 10px;
 }
 
-.about div {
+.button {
+    display: flex;
     margin: auto;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0.2em var(--secondary-bg-color), 0 0 0.2em var(--secondary-bg-color);
+    border-radius: 25px;
+    max-width: 150px;
+    min-height: 50px;
+}
+
+.about a {
+    color: var(--secondary-font-color);
 }
 
 /* end About section */
@@ -117,6 +163,11 @@ nav div {
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
     padding: 20px;
+    min-height: 1320px;
+    background-image: url("../images/background_features.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 }
 
 .features h2 {
@@ -163,6 +214,11 @@ nav div {
     grid-auto-rows: minmax(100px, auto);
     padding: 20px;
     text-align: center;
+    min-height: 550px;
+    background-image: url("../images/background_available.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
 }
 
 .available h2 {
